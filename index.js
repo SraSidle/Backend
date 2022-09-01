@@ -3,9 +3,11 @@ const cors = require("cors");
 
 const port = 3000;
 const app = express();
+const routes = require("./src/routes/paletas.routes")
 
 app.use(express.json());
 app.use(cors());
+app.use("paletas", routes);
 
 const paletas = [
     {
